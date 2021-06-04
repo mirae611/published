@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/datepicker.min.css">
+    
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/datepicker.min.js"></script>
+    <script type="text/javascript" src="js/datepicker.ko.js"></script>
+    
+    
+</head>
+<body onload="loaded()">
+    <header id="header">
+        <div class="logo"><h1>Adminator</h1></div>
+        <div class="wrap">
+            <a class="nav_btn" href="#"><i class="fas fa-bars"></i></a>
+            <a href="#"><i class="fas fa-search"></i></a>
+            <ul class="right">
+                <li><a href="#"><i class="far fa-bell"></i><span class="count">5</span></a></li>
+                <li><a href="#"><i class="far fa-envelope"></i><span class="count">2</span></a></li>
+                <li class="user">Jang Mirae</li>
+            </ul>
+        </div>
+    </header>
+    <nav id="nav">
+        <div id="wrapper">
+            <div id="scroller">
+                <ul class="nav_menu">
+                    <li><a href="/project_admin/index.html"><i class="fas fa-home"></i>Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i>Info</a>
+                        <ul>
+                            <li><a href="#">회원정보</a>
+                                <ul>
+                                    <li><a href="#">일반회원</a></li>
+                                    <li><a href="#">채용담당자</a></li>
+                                    <li><a href="#">관리자</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">기관정보</a>
+                                <ul>
+                                    <li><a href="#">대학정보</a></li>
+                                    <li><a href="#">대학원정보</a></li>
+                                    <li><a href="#">학과정보</a></li>
+                                    <li><a href="#">학과분류기준</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-pen"></i>Forms</a>
+                        <ul>
+                            <li><a href="#">Tables</a></li>
+                            <li><a href="/project_admin/index.html">Form UI<i class="fas fa-check check"></i></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-palette"></i>UI Elements</a>
+                        <ul>
+                            <li><a href="/project_admin/page/layout.html">Layout<i class="fas fa-check check"></i></a></li>
+                            <li><a href="/project_admin/page/buttons.html">Buttons<i class="fas fa-check check"></i></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-file"></i>Pages</a>
+                        <ul>
+                            <li><a href="#">404</a></li>
+                            <li><a href="#">500</a></li>
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-calendar"></i>Calendar</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i>Charts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main id="main">
+        <div class="title">
+            <h2>Form</h2>
+            <p>기본폼 정의  (input, textarea, checkbox, radio, image, file 등)</p>
+        </div>
+        <section class="layout column_1">
+            <div class="layout_box">
+                <h3>Basic Form</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label for="id"><span class="required" title="필수입력">*</span>아이디</label></th>
+                            <td>
+                                <input type="text" name="id" id="id" placeholder="ex) mirae">
+                                <a class="btn small blue" href="#">중복확인</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="password1"><span class="required" title="필수입력">*</span>비밀번호</label></th>
+                            <td>
+                                <input type="password" name="password1" id="password1" />
+                            </td>
+                        </tr>
+                        <tr>
+                           <tr>
+                            <th><label for="password2"><span class="required" title="필수입력">*</span>비밀번호 확인</label></th>
+                            <td>
+                                <input type="password" name="password2" id="password2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="name"><span class="required" title="필수입력">*</span>이름</label></th>
+                            <td>
+                                <input type="text" name="name" id="name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="birthday"><span class="required" title="필수입력">*</span>생년월일</label></th>
+                            <td>
+                                <select name="birthday" id="birthday">
+                                    <option value=""></option>
+                                    <option value="">2018</option>
+                                    <option value="">2017</option>
+                                    <option value="">2016</option>
+                                    <option value="">2015</option>
+                                    <option value="">2014</option>
+                                    <option value="">2013</option>
+                                    <option value="">2012</option>
+                                    <option value="">2011</option>
+                                    <option value="">2010</option>
+                                    <option value="">2009</option>
+                                    <option value="">2008</option>
+                                    <option value="">2007</option>
+                                    <option value="">2006</option>
+                                    <option value="">2005</option>
+                                    <option value="">2004</option>
+                                    <option value="">2003</option>
+                                    <option value="">2002</option>
+                                    <option value="">2001</option>
+                                    <option value="">1999</option>
+                                    <option value="">1998</option>
+                                    <option value="">1997</option>
+                                    <option value="">1996</option>
+                                    <option value="">1995</option>
+                                    <option value="">1994</option>
+                                    <option value="">1993</option>
+                                    <option value="">1992</option>
+                                    <option value="">1991</option>
+                                    <option value="">1990</option>
+                                </select>
+                                년
+                                <select name="birthday2" id="birthday2">
+                                    <option value=""></option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                    <option value="">8</option>
+                                    <option value="">9</option>
+                                    <option value="">10</option>
+                                    <option value="">11</option>
+                                    <option value="">12</option>
+                                </select>
+                                월
+                                <select name="birthday3" id="birthday3">
+                                    <option value=""></option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                    <option value="">8</option>
+                                    <option value="">9</option>
+                                    <option value="">10</option>
+                                    <option value="">11</option>
+                                    <option value="">12</option>
+                                    <option value="">13</option>
+                                    <option value="">14</option>
+                                    <option value="">15</option>
+                                    <option value="">16</option>
+                                    <option value="">17</option>
+                                    <option value="">18</option>
+                                    <option value="">19</option>
+                                    <option value="">20</option>
+                                    <option value="">21</option>
+                                    <option value="">22</option>
+                                    <option value="">23</option>
+                                    <option value="">24</option>
+                                    <option value="">25</option>
+                                    <option value="">26</option>
+                                    <option value="">27</option>
+                                    <option value="">28</option>
+                                    <option value="">29</option>
+                                    <option value="">30</option>
+                                    <option value="">31</option>
+                                </select>
+                                일
+                                <input type="radio" name="birthday" checked>양력
+                                <input type="radio" name="birthday">음력
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="gender"><span class="required" title="필수입력">*</span>성별</label></th>
+                            <td>
+                                <input type="radio" name="gender" id="gender">남
+                                <input type="radio" name="gender">여 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="tel"><span class="required" title="필수입력">*</span>전화번호</label></th>
+                            <td>
+                                <select name="tel" id="tel">
+                                    <option value=""></option>
+                                    <option value="">010</option>
+                                    <option value="">011</option>
+                                    <option value="">016</option>
+                                    <option value="">017</option>
+                                </select> -
+                                <input type="text" name="tel" id="tel" maxlength="4"> -
+                                <input type="text" name="tel" maxlength="4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="email">이메일</label></th>
+                            <td>
+                                <input type="email" name="email" id="email" /> @ 
+                                <select name="email2" id="email2">
+                                    <option>선택</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="nate.com">nate.com</option>
+                                    <option value="hanmail.net">hanmail.net</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="zip">주소</label></th>
+                            <td>
+                                <p class="line">
+                                    <input type="text" name="zip" id="zip" maxlength="5" />
+                                    <a class="btn small blue" href="#">우편번호 검색</a>
+                                </p>
+                                <p class="line">
+                                    <input type="text" name="address1" id="address1" class="half" />
+                                    <input type="text" name="address2" id="address2" class="half" />
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="title">제목</label></th>
+                            <td>
+                                <input type="text" name="title" id="title" class="full">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="date">예약날짜</label></th>
+                            <td>
+                                <input type='text' name="date" id="date" class='datepicker-here date' data-language='ko' />
+                                <a class="btn icon purple" href="#"><i class="fas fa-calendar"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="service">선택사항</label></th>
+                            <td>
+                                <ul>
+                                    <li><input type="checkbox" name="service" id="service" />증명사진</li>
+                                    <li><input type="checkbox" name="service" />취업사진</li>
+                                    <li><input type="checkbox" name="service" />여권사진</li>
+                                </ul>
+                                <ul>
+                                    <li><input type="checkbox" name="service" />헤어</li>
+                                    <li><input type="checkbox" name="service" />메이크업</li>
+                                    <li><input type="checkbox" name="service" />의상대여</li>
+                                </ul>
+                                <ul>
+                                    <li><input type="checkbox" name="service" />사진</li>
+                                    <li><input type="checkbox" name="service" />액자</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>요청사항</th>
+                            <td>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script>
+    'use strict';
+    $('input.date').data('datepicker');
+    </script>
+</body>
+</html>

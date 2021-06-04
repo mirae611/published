@@ -1,0 +1,116 @@
+/*reset*/
+body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, p, dl, dt, dd {margin: 0; padding: 0;}
+header, main, footer, section, article, aside, nav {display: block;}
+
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+h2 {font-size: 27px;}
+h3 {font-size: 17px; margin-bottom: 15px;}
+a {color: inherit; text-decoration: inherit;}
+ul li {list-style: none;}
+
+body {background: #f9fafb; color: #313435; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
+
+#header {position: fixed; width: 100%; color: #fff; background: linear-gradient(154deg, #1abc9c 0, #337ab7); z-index: 10;}
+#header .logo {position: relative; float: left; width: 279px; height: 65px; background: rgba(0, 0, 0, .2);}
+#header h1 {position: absolute; left: 50%; transform: translateX(-50%); margin-left: -12px; padding-left: 60px; line-height: 65px; background: url(../img/logo-white.png) no-repeat top left;}
+#header .wrap {padding: 0 15px; line-height: 65px;}
+#header i {padding: 0 15px; font-size: 20px;}
+#header ul li {float: left;}
+#header ul.right {float: right; margin-right: 15px;}
+#header ul.right li a {position: relative;}
+#header ul.right li a span.count {display: inline-block; position: absolute; top: -10px; right: 3px; width: 17px; height: 17px; line-height: 17px; color: #fff; font-size: 12px; background: #d9534f; border-radius: 50%; text-align: center;}
+#header ul.right li.user:before {content: ''; display: block; float: left; width: 45px; height: 45px; margin: 10px 5px 0 15px; background: url(../img/user.jpg) no-repeat top center; background-size: cover; border-radius: 50%; overflow: hidden;}
+
+#nav {position: fixed; left: 0; width: 279px; height: calc(100vh - 65px); margin-top: 65px; background: #2f3e47; transition: left .5s;}
+#nav.off {left: -280px;}
+#nav #wrapper {position: absolute; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 1;}
+#nav ul.nav_menu {padding: 30px 35px 100px 35px;}
+#nav ul.nav_menu > li a {display: block; line-height: 45px; font-size: 17px; color: rgba(255, 255, 255, 0.5);}
+#nav ul.nav_menu > li::hover a {color: rgba(255, 255, 255, 0.9);}
+#nav ul.nav_menu > li + li {margin-top: 5px;}
+#nav ul.nav_menu > li a i {padding-right: 10px;}
+#nav ul.nav_menu > li a i.arrow {float: right; padding: 0; line-height: 45px; transition: transform .3s;}
+#nav ul.nav_menu > li.open a i.arrow {transform: rotate(180deg);}
+#nav ul.nav_menu > li > ul {height: 0; margin: 0 30px; overflow: hidden; transition: height .3s;}
+#nav ul.nav_menu > li > ul > li > a i.check {padding-left: 10px; line-height: 45px; font-size: 10px; color: #3498db;}
+#nav ul.nav_menu > li > ul > li.open a i {transform: rotate(180deg);}
+#nav ul.nav_menu > li > ul > li > ul > li a {margin-left: 20px; line-height: 35px; font-size: 13px;}
+#nav ul.nav_menu > li > ul > li > ul > li a:before {content: '-'; margin-right: 5px;}
+
+#main {height: 100%; padding: 96px 20px 140px 310px; color: #505458; transition: all .5s;}
+#main.off {padding-left: 30px;}
+#main .title {margin: 0 0 50px 30px;}
+#main .title h2 + p {font-size: 14px; color: #72777a;}
+
+/*dachboard*/
+.widget.count div {padding: 30px;}
+.widget.count div h3{text-align: center;}
+.widget.count div p {text-align: center; font-size: 30px; line-height: 35px; font-weight: bold; color: #57c5a5;}
+
+.widget.user div {position: relative; padding: 30px 30px 30px 130px; font-size: 13px; line-height: 20px;}
+/*.widget.user div::after {content: ''; position: absolute; top: 50%; left: 30px; transform: translateY(-50%); display: block; width: 72px; height: 72px; background: url(../img/user1.jpg) no-repeat top center; background-size: cover; border-radius: 50%;}*/
+/*.widget.user div .user1 {background: url(../img/user2.jpg) no-repeat top center;}*/
+.widget.user div img {position: absolute; top: 50%; left: 30px; width: 72px; height: 72px; transform: translateY(-50%); border: 1px solid #d4d4d4; border-radius: 50%;}
+.widget.user div h3 {margin: 0;}
+.widget.user div b {color: #57c5a5;}
+
+.widget.chart {}
+
+/*form ul*/
+table {width: 100%; color: #666;}
+table th {position: relative; width: 225px; font-weight: normal; border-top: 1px dashed #efefef;}
+table th label {position: absolute; top: 26px; left: 55px;}
+table th span.required {color: red; padding-right: 5px;}
+table td {padding: 18px 20px; border-top: 1px dashed #efefef;}
+input[type=text], input[type=password], input[type=email], label.select > select {width: 190px; padding: 0 10px; line-height: 40px; border: 1px solid #efefef; box-sizing: border-box;}
+input.half {float: left; width: 49.8%;}
+input.half + .half {margin-left: .4%;}
+input.full {width: 100%;}
+input[type=text]#tel {width: 70px; padding: 0 15px; text-align: center;}
+input[type=text]#zip {width: 80px; padding: 0 17px;}
+::placeholder {color: #ccc;}
+table td select {height: 30px; padding: 0 10px; border: 1px solid #efefef; border-radius: 3px;}
+table td p.line + p.line {margin-top: 12px;}
+table td textarea {width: 100%; border: 1px solid #efefef; border-radius: 3px;}
+table td ul {overflow: hidden;}
+table td ul + ul {margin-top: 5px;}
+table td ul li {float: left; width: 120px;}
+
+/*layout*/
+.layout {margin: 20px 0; overflow: hidden;}
+.layout_box {float: left; min-height: 100px; padding: 15px 20px; background: #fff; border: 1px solid #efefef; border-radius: 5px; box-sizing: border-box;}
+.layout_box + .layout_box {margin-left: 2%;}
+.layout.column_1 .layout_box {width: 100%;}
+.layout.column_2 .layout_box {float: left; width: 49%;}
+.layout.column_2-1 .layout_box {width: 32%;}
+.layout.column_2-1 .layout_box:first-child {width: 66%;}
+.layout.column_2-2 .layout_box {width: 66%;}
+.layout.column_2-2 .layout_box:first-child {width: 32%;}
+.layout.column_3 .layout_box {width: 32%;}
+.layout.column_4 .layout_box {width: 23.5%;}
+
+/*button*/
+.button_box {text-align: right; margin: 10px 0;}
+.button_box.center {text-align: center;}
+a.btn {position: relative; display: inline-block; color: #fff; border-radius: 5px; text-align: center;}
+.button_box button, .button_box input[type=submit] {display: inline-block; min-width: 120px; padding: 0 15px; line-height: 36px; font-size: 15px; color: #fff; border-radius: 5px; text-align: center;}
+a.btn.tiny {min-width: 40px; padding: 0 8px; line-height: 22px; font-size: 11px;}
+a.btn.small {min-width: 80px; padding: 0 12px; line-height: 28px; font-size: 13px;}
+a.btn.medium {min-width: 120px; padding: 0 15px; line-height: 36px; font-size: 15px;}
+a.btn.large {min-width: 160px; padding: 0 18px; line-height: 42px; font-size: 17px;}
+a.btn.default {background: #ccc;}
+a.btn.mint {background: #1abc9c;}
+a.btn.green {background: #5cb85c;}
+a.btn.blue {background: #337ab7;}
+a.btn.purple {background: #9b59b6;}
+a.btn.midnight {background: #34495e;}
+a.btn.yellow {background: #f1c40f;}
+a.btn.orange {background: #f0ad4e;}
+a.btn.red {background: #d9534f;}
+a.btn.coral {background: #e74c3c;}
+a.btn.left {float: left; margin-left: 4px;}
+a.btn span.fa.left {margin-right: 5px;}
+a.btn span.right {padding-left: 5px;}
+a.btn span.bg:before {content: ''; display: block; background: rgba(255, 255, 255, 0.3); position: absolute; top: 0; left: 0; height: 100%; border: black;}
+a.btn.icon {width: 32px; line-height: 32px;}
+a.btn.icon.round {border-radius: 50%;}

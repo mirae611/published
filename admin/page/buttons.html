@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons | Admin</title>
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/datepicker.min.js"></script>
+    <script type="text/javascript" src="js/datepicker.ko.js"></script>
+</head>
+<body onload="loaded()">
+    <header id="header">
+        <div class="logo"><h1>Adminator</h1></div>
+        <div class="wrap">
+            <a class="nav_btn" href="#"><i class="fas fa-bars"></i></a>
+            <a href="#"><i class="fas fa-search"></i></a>
+            <ul class="right">
+                <li><a href="#"><i class="far fa-bell"></i><span class="count">5</span></a></li>
+                <li><a href="#"><i class="far fa-envelope"></i><span class="count">2</span></a></li>
+                <li class="user">Jang Mirae</li>
+            </ul>
+        </div>
+    </header>
+    <nav id="nav">
+        <div id="wrapper">
+            <div id="scroller">
+                <ul class="nav_menu">
+                    <li><a href="/project_admin/index.html"><i class="fas fa-home"></i>Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i>Info</a>
+                        <ul>
+                            <li><a href="#">회원정보</a>
+                                <ul>
+                                    <li><a href="#">일반회원</a></li>
+                                    <li><a href="#">채용담당자</a></li>
+                                    <li><a href="#">관리자</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">기관정보</a>
+                                <ul>
+                                    <li><a href="#">대학정보</a></li>
+                                    <li><a href="#">대학원정보</a></li>
+                                    <li><a href="#">학과정보</a></li>
+                                    <li><a href="#">학과분류기준</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-pen"></i>Forms</a>
+                        <ul>
+                            <li><a href="#">Tables</a></li>
+                            <li><a href="/project_admin/index.html">Form UI<i class="fas fa-check check"></i></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-palette"></i>UI Elements</a>
+                        <ul>
+                            <li><a href="/project_admin/page/layout.html">Layout<i class="fas fa-check check"></i></a></li>
+                            <li><a href="/project_admin/page/buttons.html">Buttons<i class="fas fa-check check"></i></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-file"></i>Pages</a>
+                        <ul>
+                            <li><a href="#">404</a></li>
+                            <li><a href="#">500</a></li>
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-calendar"></i>Calendar</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i>Charts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main id="main">
+        <div class="title">
+            <h2>Button</h2>
+            <p>버튼 Guide (Color, Size, 정렬, icon 등)</p>
+        </div>
+        <section class="layout column_1">
+            <div class="layout_box">
+                <h3>Tag</h3>
+                <div class="button_box">
+                    <a href="#" class="btn medium default">a</a>
+                    <button>button</button>
+                    <input type="submit" value="input">
+                </div>
+            </div>
+        </section>
+        <section class="layout column_1">
+            <div class="layout_box">
+                <h3>Size</h3>
+                <div class="button_box">
+                    <a href="#" class="btn tiny default">tiny</a>
+                    <a href="#" class="btn small default">small</a>
+                    <a href="#" class="btn medium default">medium</a>
+                    <a href="#" class="btn large default">large</a>
+                </div>
+            </div>
+        </section>
+        <section class="layout column_1">
+            <div class="layout_box">
+                <h3>Color</h3>
+                <div class="button_box">
+                    <a href="#" class="btn small default">default</a>
+                    <a href="#" class="btn small mint">mint</a>
+                    <a href="#" class="btn small green">green</a>
+                    <a href="#" class="btn small blue">blue</a>
+                    <a href="#" class="btn small purple">purple</a>
+                    <a href="#" class="btn small midnight">midnight</a>
+                    <a href="#" class="btn small yellow">yellow</a>
+                    <a href="#" class="btn small orange">orange</a>
+                    <a href="#" class="btn small red">red</a>
+                    <a href="#" class="btn small coral">coral</a>
+                </div>
+            </div>
+        </section>
+        <section class="layout column_1">
+            <div class="layout_box">
+                <h3>Layout</h3>
+                <div class="button_box">
+                    <a href="#" class="btn small default left">Button</a>
+                    <a href="#" class="btn small mint left">Button</a>
+                    <a href="#" class="btn small green left">Button</a>
+                    <a href="#" class="btn small blue">Button</a>
+                    <a href="#" class="btn small purple">Button</a>
+                    <a href="#" class="btn small midnight">Button</a>
+                </div>
+                <div class="button_box center">
+                    <a href="#" class="btn small yellow">Button</a>
+                    <a href="#" class="btn small red">Button</a>
+                    <a href="#" class="btn small coral">Button</a>
+                </div>
+            </div>
+        </section>
+        <section class="layout column_1">
+            <div class="layout_box">
+                <h3>Icon</h3>
+                <div class="button_box">
+                    <a href="#" class="btn small blue"><span class="fa left"><i class="fas fa-shopping-cart"></i></span>Add to cart</a>
+                    <a href="#" class="btn small mint">Comment <span class="fa right"><i class="far fa-comment-dots"></i></span></a>
+                    <a href="#" class="btn medium midnight"><span class="fa left bg"><i class="fas fa-cloud-download-alt"></i></span>Download</a>
+                    <a href="#" class="btn medium coral">Favorite<span class="fa right bg"><i class="fas fa-star right"></i></span></a>
+                </div>
+                <div class="button_box">
+                    <a href="#" class="btn icon pumpkin"><i class="fas fa-cog"></i></a>
+                    <a href="#" class="btn icon purple"><i class="fas fa-user"></i></a>
+                    <a href="#" class="btn icon blue"><i class="fas fa-map-marker-alt"></i></a>
+                    <a href="#" class="btn icon round default"><i class="far fa-bell"></i></a>
+                    <a href="#" class="btn icon round green"><i class="fas fa-plus"></i></a>
+                    <a href="#" class="btn icon round yellow"><i class="fas fa-search-plus"></i></a>                    
+                </div>                
+            </div>
+        </section>
+    </main>
+</body>
+</html>
